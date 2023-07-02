@@ -1,0 +1,20 @@
+{
+  "name": "todo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev":"npx tailwindcss -i ./assets/css/main.css -o ./dist/main.css",
+    "watch":"npx tailwindcss -i ./assets/css/main.css -o ./dist/main.css --watch",
+    "build":"npx tailwindcss -o ./dist/main.css --minify"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.4.0"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.3.2"
+  }
+}
