@@ -47,7 +47,7 @@ export default function Todo() {
     }
 
     function update(id, title, data) {
-        storage.update("items", id, { title: data.title });
+        storage.update("items", id, { title: title });
 
         btn.textContent = "Submit";
     }
