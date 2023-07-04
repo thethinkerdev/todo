@@ -60,6 +60,11 @@ export default function DOM() {
 
                 input.dataset.idTodo = todo.id;
                 input.dataset.prevValue = todo.title;
+
+                alert.create("موفقیت آمیز", "تسک مورد نظر را ویرایش نمایید");
+
+                // GO To Form Section to Edit Todo
+                scrollTo(0, 0)
             });
 
             todoElement.querySelector(".delete-action").addEventListener('click', (e) => {
