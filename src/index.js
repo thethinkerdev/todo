@@ -25,7 +25,7 @@ const storage = Storage();
 
         if (btnTextContent === "Edit") {
             const { idTodo } = inputDataset;
-            update(idTodo, input.value, todos)
+            update(idTodo, input.value)
 
             renderData(storage.get("items"));
             alert.create("موفقیت آمیز", "تسک مورد نظر با موفقیت ویرایش شد");
