@@ -4,4 +4,85 @@
 
 html {
   font-family: "Ysabeau SC", sans-serif;
+  scroll-behavior: smooth;
+}
+
+
+.checkbox-container .checkbox-checkmark:hover {
+  background-color: rgb(197, 197, 255);
+}
+
+.checkbox-container .checkbox-input:checked~.checkbox-checkmark {
+  background-color: rgb(37, 37, 151);
+}
+
+
+.checkbox-container .checkbox-input:checked~.checkbox-checkmark::after {
+  display: block;
+}
+
+
+.checkbox-checkmark::after {
+  content: "";
+  display: none;
+  width: 6px;
+  height: 11px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  border-radius: 2.5px;
+  transform: rotate(45deg);
+}
+
+
+#loading {
+  width: 24px;
+  height: 24px;
+  border: 1px solid red;
+  border-radius: 50%;
+  border-bottom: none;
+  border-right: none;
+  animation: rotate infinite ease-out alternate-reverse 1s;
+  display: none;
+}
+
+@keyframes rotate {
+  0% {
+      transform: rotate(0deg);
+  }
+
+  90% {
+      transform: rotate(360deg);
+  }
+
+  100% {
+      transform: rotate(0deg);
+  }
+}
+
+.alert {
+  animation: comeFromRight 0.1s forwards;
+}
+
+@keyframes comeFromRight {
+  from {
+      transform: translateX(200px);
+  }
+
+  to {
+      transform: translateX(0px);
+  }
+}
+
+.alert-hide {
+  animation: goToRight 1s forwards;
+}
+
+@keyframes goToRight {
+  from {
+      transform: translateX(0px);
+  }
+
+  to {
+      transform: translateX(100%);
+  }
 }

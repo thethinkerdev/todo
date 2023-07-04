@@ -12,87 +12,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Ysabeau+SC:wght@100;500;1000&display=swap" rel="stylesheet">
 </head>
 
-<style>
-    .checkbox-container .checkbox-checkmark:hover {
-        background-color: rgb(197, 197, 255);
-    }
-
-    .checkbox-container .checkbox-input:checked~.checkbox-checkmark {
-        background-color: rgb(37, 37, 151);
-    }
-
-
-    .checkbox-container .checkbox-input:checked~.checkbox-checkmark::after {
-        display: block;
-    }
-
-
-    .checkbox-checkmark::after {
-        content: "";
-        display: none;
-        width: 6px;
-        height: 11px;
-        border: solid white;
-        border-width: 0 3px 3px 0;
-        border-radius: 2.5px;
-        transform: rotate(45deg);
-    }
-
-
-    #loading {
-        width: 24px;
-        height: 24px;
-        border: 1px solid red;
-        border-radius: 50%;
-        border-bottom: none;
-        border-right: none;
-        animation: rotate infinite ease-out alternate-reverse 1s;
-        display: none;
-    }
-
-    @keyframes rotate {
-        0% {
-            transform: rotate(0deg);
-        }
-
-        90% {
-            transform: rotate(360deg);
-        }
-
-        100% {
-            transform: rotate(0deg);
-        }
-    }
-
-    .alert {
-        animation: comeFromRight 0.1s forwards;
-    }
-
-    @keyframes comeFromRight {
-        from {
-            transform: translateX(200px);
-        }
-
-        to {
-            transform: translateX(0px);
-        }
-    }
-
-    .alert-hide {
-        animation: goToRight 1s forwards;
-    }
-
-    @keyframes goToRight {
-        from {
-            transform: translateX(0px);
-        }
-
-        to {
-            transform: translateX(100%);
-        }
-    }
-</style>
-
 <body class="bg-zinc-900">
 
 
@@ -131,8 +50,7 @@
                             d="M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L6.832 19.82a4.5 4.5 0 01-1.897 1.13l-2.685.8.8-2.685a4.5 4.5 0 011.13-1.897L16.863 4.487zm0 0L19.5 7.125" />
                     </svg>
                 </i>
-                <i class="cursor-pointer bg-rose-500 text-white rounded-full px-2 py-1"
-                    data-delete-action>
+                <i class="cursor-pointer bg-rose-500 text-white rounded-full px-2 py-1" data-delete-action>
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                         stroke="currentColor" class="w-6 h-6">
                         <path stroke-linecap="round" stroke-linejoin="round"
