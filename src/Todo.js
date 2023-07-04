@@ -5,7 +5,7 @@ import Storage from "./Storage.js";
 
 
 const { renderData } = DOM();
-const { loading, input, btn } = Elements();
+const { loading, input, btn, label } = Elements();
 const storage = Storage();
 export default function Todo() {
 
@@ -50,6 +50,8 @@ export default function Todo() {
         storage.update("items", id, { title: title });
 
         btn.textContent = "Submit";
+        label.textContent = "Add New";
+
     }
 
     return { loadData, remove, update, create };

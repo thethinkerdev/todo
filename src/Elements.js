@@ -9,7 +9,7 @@ export default function Elements() {
     const linkFilterComplete = document.querySelector(".link-filter-complete");
     const linkFilterUnComplete = document.querySelector(".link-filter-uncomplete");
     const todoElementTemplate = document.querySelector("#todo-element-template");
+    const label = document.querySelector("#label");
 
-
-    return { todos, loading, input, btn, checkboxes, linkFilters, linkFilterAll, linkFilterComplete, linkFilterUnComplete, todoElementTemplate };
+    return { todos, loading, input, btn, checkboxes, linkFilters, linkFilterAll, linkFilterComplete, linkFilterUnComplete, todoElementTemplate, label };
 }

@@ -3,7 +3,7 @@ import Elements from "./Elements.js";
 import Storage from "./Storage.js";
 import Todo from "./Todo.js";
 
-const { todos: todosList, btn, input, form, checkboxes } = Elements();
+const { todos: todosList, btn, input, form, checkboxes, label } = Elements();
 const { remove } = Todo();
 const storage = Storage();
 const alert = Alert();
@@ -56,7 +56,9 @@ export default function DOM() {
 
             todoElement.querySelector('.edit-action').addEventListener('click', () => {
                 input.value = todo.title;
-                btn.textContent = "Edit";
+                btn.textContent = "Submit Edit";
+
+                label.textContent = "Edit Todo";
 
                 input.dataset.idTodo = todo.id;
                 input.dataset.prevValue = todo.title;

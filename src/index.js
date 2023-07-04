@@ -23,7 +23,7 @@ const storage = Storage();
         const btnTextContent = btn.textContent;
 
 
-        if (btnTextContent === "Edit") {
+        if (btnTextContent === "Submit Edit") {
             const { idTodo } = inputDataset;
             update(idTodo, input.value)
 
