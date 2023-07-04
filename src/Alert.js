@@ -3,12 +3,7 @@ export default function Alert() {
         if (!title || !message) return;
 
 
-        let mTop = 5;
-        const element = document.querySelector('.alert');
-        if (element) {
-            mTop = element.clientHeight;
-        }
-
+        let mTop = 1;
 
         const alert = document.createElement('div');
         alert.className = `alert transition-all bg-blue-500 rounded shadow text-white text-right inline-flex items-center`;
@@ -38,11 +33,11 @@ export default function Alert() {
 
         setTimeout(() => {
             alert.classList.add('alert-hide');
-            
+
             alert.addEventListener('animationend', () => {
                 alert.remove();
             })
-        }, 3000)
+        }, 1000)
 
 
 
