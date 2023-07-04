@@ -25,16 +25,18 @@ const storage = Storage();
 
         if (btnTextContent === "Submit Edit") {
             const { idTodo } = inputDataset;
-            update(idTodo, input.value)
+            if (update(idTodo, input.value)) {
+                renderData(storage.get("items"));
+                alert.create("موفقیت آمیز", "تسک مورد نظر با موفقیت ویرایش شد");
+            }
 
-            renderData(storage.get("items"));
-            alert.create("موفقیت آمیز", "تسک مورد نظر با موفقیت ویرایش شد");
 
         } else {
             create(input.value);
-            renderData(storage.get("items"));
+            if (renderData(storage.get("items"))) {
+                alert.create("موفقیت آمیز", "تسک مورد نظر با موفقیت ایجاد شد");
+            }
 
-            alert.create("موفقیت آمیز", "تسک مورد نظر با موفقیت ایجاد شد");
 
         }
 

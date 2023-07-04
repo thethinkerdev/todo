@@ -1,12 +1,12 @@
 export default function Alert() {
-    function create(title, message) {
+    function create(title, message, type = "bg-blue-500") {
         if (!title || !message) return;
 
 
         let mTop = 1;
 
         const alert = document.createElement('div');
-        alert.className = `alert transition-all bg-blue-500 rounded shadow text-white text-right inline-flex items-center`;
+        alert.className = `alert transition-all ${type} rounded shadow text-white text-right inline-flex items-center`;
 
         alert.style.direction = "rtl";
         alert.style.marginTop = `${mTop}px`;
@@ -37,10 +37,11 @@ export default function Alert() {
         setTimeout(() => {
             alert.classList.add('alert-hide');
 
-            alert.addEventListener('animationend', () => {
+            setTimeout(() => {
                 alert.remove();
-            })
+            }, 1000)
         }, 3000)
+
 
 
 

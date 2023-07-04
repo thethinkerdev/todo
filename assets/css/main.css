@@ -71,7 +71,7 @@ html {
 }
 
 .alert-hide {
-  animation: goToRight 1s forwards;
+  animation: goToRight 1s;
 }
 
 @keyframes goToRight {
@@ -80,7 +80,7 @@ html {
   }
 
   to {
-    transform: translateX(100%);
+    transform: translateX(200px);
     display: none;
   }
 }
