@@ -30,6 +30,9 @@ export default function Alert() {
 
         document.querySelector('.grid-alerts').append(alert);
 
+        alert.addEventListener('click', () => {
+            alert.classList.add('alert-hide');
+        })
 
         setTimeout(() => {
             alert.classList.add('alert-hide');
@@ -37,7 +40,7 @@ export default function Alert() {
             alert.addEventListener('animationend', () => {
                 alert.remove();
             })
-        }, 1000)
+        }, 3000)
 
 
 
